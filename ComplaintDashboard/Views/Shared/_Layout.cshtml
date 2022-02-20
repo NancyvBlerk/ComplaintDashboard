@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+            position: relative;
+            left: 40%;
+        }
+
+            li a {
+                display:inline-block;
+                color: #cc99cc;
+                text-align: center;
+                padding: 16px;
+                text-decoration: none;
+            }
+
+        li a:hover {
+            background-color: #111111;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="/Home/Index">Log Complaint</a></li>
+        <li><a href="/Account/Login">Submissions</a></li>S
+
+    </ul>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Nancy van Blerk</p>
+        </footer>
+    </div>
+
+
+    
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
